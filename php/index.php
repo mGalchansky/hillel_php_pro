@@ -44,10 +44,16 @@ class ValueObject
     {
         return $this->blue;
     }
+
+    static public function random()
+    {
+        return $randColors = new ValueObject(rand(0, 255), rand(0, 255), rand(0, 255));
+    }
     }
 
 
     $colors = new ValueObject(255, 0,10);
-echo $colors->getRed();
-echo $colors->getGreen();
-echo $colors->getBlue();
+$colors->random();
+echo $randColors->getRed();
+echo $randColors->getGreen();
+echo $randColors->getBlue();
