@@ -1,4 +1,5 @@
 <?php
+
 trait Trait1
 {
     public function test(): int
@@ -6,6 +7,7 @@ trait Trait1
         return 1;
     }
 }
+
 trait Trait2
 {
     public function test(): int
@@ -13,6 +15,7 @@ trait Trait2
         return 2;
     }
 }
+
 trait Trait3
 {
     public function test(): int
@@ -21,8 +24,21 @@ trait Trait3
     }
 }
 
-class Test()
+class Test
 {
-    use Trait1, Trait2, Trait3;
+    use Trait1, Trait2, Trait3 {
+        Trait1::test insteadof Trait2;
+        Trait2::test insteadof Trait3;
+        Trait2::test as test2;
+        Trait3::test as test3;
+    }
+
+    public function getSum(): int
+    {
+        return $this->test() + $this->test2() + $this->test3();
+    }
 
 }
+
+$sum = new Test();
+echo $sum->getSum();
