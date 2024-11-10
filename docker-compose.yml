@@ -1,23 +1,30 @@
-version: '3'
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  php_10_24_db_vol:
+    driver: local
 
 services:
-  db:
-    image: mysql:8
-    environment:
-      MYSQL_ROOT_PASSWORD: my_secret_pw_shh
-      MYSQL_DATABASE: test_db
-      MYSQL_USER: devuser
-      MYSQL_PASSWORD: devpass
+  app:
+    build:
+      context: .docker/php
+    restart: "always"
     ports:
-      - "9906:3306"
-  web:
-    image: php:8.3-apache
-    container_name: php_web
-    depends_on:
-      - db
+      - "8081:80" # 443 => https
     volumes:
-      - ./php/:/var/www/html/
+      - .:/var/www/html
+    networks:
+      - app_network
+  mysql:
+    image: "mysql:8"
+    restart: "always"
     ports:
-      - "8100:80"
-    stdin_open: true
-    tty: true
+      - "33062:3306" # 127.0.0.1:33061
+    volumes:
+      - "php_10_24_db_vol:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: php_10_24_db
+      networks: app_network
