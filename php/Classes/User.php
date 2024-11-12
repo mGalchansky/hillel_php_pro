@@ -4,8 +4,8 @@ namespace Classes;
 
 class User
 {
-public function test()
-{
-    return 'test';
-}
+    public function test()
+    {
+        return 'test';
+    }
 }
