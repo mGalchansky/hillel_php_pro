@@ -4,11 +4,12 @@ namespace Classes;
 
 class User
 {
-private string $name = 'Gena';
-private $email;
-private $age;
+    private string $name = 'Gena';
+    private $email;
+    private $age;
 
-public function test(){
-    return $this->name;
-}
+    public function test()
+    {
+        return $this->name;
+    }
 }

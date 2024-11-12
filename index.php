@@ -1,5 +1,5 @@
 <?php
-#require_once 'Classes\User.php';
+require_once __DIR__ . '/Classes/User.php';
 
 use Classes\User;
 
