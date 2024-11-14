@@ -6,11 +6,11 @@ use Classes\User;
 try {
     $test = new User();
 
-    $test->setName('Anton');
-    $test->setAge(22);
+    $test->setName('Name');
+    $test->setAge(-5);
     $test->setEmail('anton@gmail.com');
 
     var_dump($test->getAll());
-} catch (MyException $e) {
+} catch (Exception $e) {
     echo $e->getMessage();
 }

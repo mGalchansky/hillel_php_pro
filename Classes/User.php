@@ -2,14 +2,14 @@
 namespace Classes;
 class User
 {
-    private $name;
+    private string $name;
     private $email;
-    private $age;
+    private int $age;
 
     public function __call($name, $arguments)
     {
         if (!method_exists($this, $name)) {
-            throw new MyExeption('Method ' . $name . ' does not exist');
+            throw new \Exception('Method ' . $name . ' does not exist');
         }
         return call_user_func_array([$this, $name], $arguments);
 
