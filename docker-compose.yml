@@ -1,23 +1,30 @@
-version: '3'
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  php_db_vol:
+    driver: local
+
 
 services:
-  db:
-    image: mysql:8
-    environment:
-      MYSQL_ROOT_PASSWORD: my_secret_pw_shh
-      MYSQL_DATABASE: test_db
-      MYSQL_USER: devuser
-      MYSQL_PASSWORD: devpass
-    ports:
-      - "9906:3306"
   web:
     image: php:8.3-apache
     container_name: php_web
-    depends_on:
-      - db
     volumes:
-      - ./php/:/var/www/html/
+      - ./:/var/www/html/
     ports:
-      - "8100:80"
-    stdin_open: true
-    tty: true
+      - "8200:80"
+
+  db_mysql:
+    image: "mysql:8"
+    ports:
+      - "33066:3306"
+    volumes:
+      - "php_db_vol:/var/lib/mysql"
+    restart: "always"
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE:   php_pro_mysql
+    networks:
+      - app_network
