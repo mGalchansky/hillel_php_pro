@@ -2,8 +2,11 @@
 
 namespace Classes;
 
-class SetProduct
+class ProductWork
 {
+    public function get(name) {
+    }
+
     public function set(name, value) {
     }
 }

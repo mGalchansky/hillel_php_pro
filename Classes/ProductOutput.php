@@ -2,8 +2,12 @@
 
 namespace Classes;
 
-class PrintProduct
+class ProductOutput
 {
+    public function show()
+    {
+    }
+
     public function print()
     {
     }
