@@ -9,6 +9,8 @@ volumes:
 
 services:
   web:
+    build:
+      context: .docker/php
     image: php:8.3-apache
     container_name: php_web
     volumes:
