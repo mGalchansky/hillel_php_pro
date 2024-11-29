@@ -1,16 +1,22 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
-use Classes\Controller;
-use Classes\Mongodb;
-use Classes\Mysql;
+require_once 'vendor/autoload.php';
 
-$db1 = new Mongodb();
-$db2 = new Mysql();
+use Classes\CarFactory;
+use Classes\EconomTaxi;
+use Classes\StandartTaxi;
+use Classes\LuxTaxi;
 
-$contr = new Controller($db2);
-var_dump($contr->getinfo());
 
-$contr1 = new Controller($db1);
-var_dump($contr1->getinfo());
+function requestTaxi(CarFactory $taxi)
+{
+    $taxi->getCarModel();
+    $taxi->getPrice();
+   // var_dump($taxi->getCarModel());
+   // var_dump($taxi->getPrice());
+}
+
+requestTaxi(new EconomTaxi());
+requestTaxi(new StandartTaxi());
+requestTaxi(new LuxTaxi());
 
 
