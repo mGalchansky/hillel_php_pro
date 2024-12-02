@@ -1,22 +1,12 @@
 <?php
 require_once 'vendor/autoload.php';
+use Classes\ContactBuilder;
 
-use Classes\CarFactory;
-use Classes\EconomTaxi;
-use Classes\StandartTaxi;
-use Classes\LuxTaxi;
-
-
-function requestTaxi(CarFactory $taxi)
-{
-    $taxi->getCarModel();
-    $taxi->getPrice();
-   // var_dump($taxi->getCarModel());
-   // var_dump($taxi->getPrice());
-}
-
-requestTaxi(new EconomTaxi());
-requestTaxi(new StandartTaxi());
-requestTaxi(new LuxTaxi());
-
-
+$contact = new ContactBuilder();
+$newContact = $contact->name('Jon')
+                      ->surname("Grey")
+                      ->email('grey@gmail.com')
+                      ->phone('+555-555-555-555')
+                      ->address('Jon_Grey street 555')
+                      ->build();
+$newContact->getContact();
