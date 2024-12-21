@@ -116,10 +116,10 @@ class Router
 
             unset($router->params['action']);
             unset($router->params['controller']);
-            if($controller->before($action, $router->params)) {
+            if ($controller->before($action, $router->params)) {
 
                 $response = call_user_func_array([$controller, $action], $router->params);
-dd($response);
+                dd($response);
 
                 $controller->after($action, $response);
 
