@@ -2,8 +2,12 @@
 return [
     'setup' => [
         [
+            'command' => 'migration:rollback',
+            'description' => 'Rollback migrations',
+        ],
+        [
             'command' => 'migration:run',
-            'description' => 'Create migration file',
+            'description' => 'Run migrations',
         ],
         [
             'command' => 'migration:create',
@@ -20,6 +24,7 @@ return [
     ],
     'commands' => [
         'migration:create' => \App\Commands\Migrations\Create::class,
-        'migration:run' => \App\Commands\Migrations\Run::class
+        'migration:run' => \App\Commands\Migrations\Run::class,
+        'migration:rollback' => \App\Commands\Migrations\Rollback::class
     ],
 ];
