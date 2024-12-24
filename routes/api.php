@@ -3,6 +3,6 @@ use App\Controllers\AuthController;
 use Core\Router;
 
 
-Router::get('api/register/{id:\d+}/user/{user_id:\d+}')
+Router::get('users')
     ->controller(AuthController::class)
     ->action('register');
