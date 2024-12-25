@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\SQL;
 use Core\Router;
 use App\Enums\Http\Status;
 
@@ -12,6 +13,17 @@ try {
     $dotenv->load();
 
     require_once BASE_DIR . '/routes/api.php';
+
+    dd(\App\Models\User::where('password', SQL::IN, value: 'test')
+        ->and('email', value: 'test@gmail.com')
+        ->orderBy([
+            'created_at' => 'DESC',
+            'email' => 'ASC'
+        ])
+        ->toSql());
+
+    \App\Models\User::where('password', value: 'test');
+
     die(Router::dispatch($_SERVER['REQUEST_URI']));
 } catch (Throwable $exception) {
 
