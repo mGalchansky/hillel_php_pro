@@ -26,6 +26,7 @@
       <path value="$PROJECT_DIR$/vendor/larapack/dd" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/splitbrain/php-cli" />
+      <path value="$PROJECT_DIR$/vendor/rbdwllr/reallysimplejwt" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.3">

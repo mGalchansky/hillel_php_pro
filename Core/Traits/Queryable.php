@@ -40,7 +40,6 @@ trait Queryable
     {
         static::resetQuery();
         static::$query .= 'SELECT ' . implode(', ', $columns) . ' FROM ' . static::$tableName;
-//dd(static::$query);
         $obj = new static;
         $obj->commands[] = 'select';
 
@@ -58,8 +57,8 @@ trait Queryable
 
     static public function findBy(string $column, mixed $value): static|false
     {
-        $query = db()->prepare('SELECT * FROM ' . static::$tableName . ' WHERE $column = :$column');
-        $query->bindParam($column, $value, PDO::PARAM_INT);
+        $query = db()->prepare("SELECT * FROM  " . static::$tableName . "  WHERE $column = :$column");
+        $query->bindParam($column, $value);
         $query->execute();
 
         return $query->fetchObject(static::class);
@@ -116,7 +115,7 @@ trait Queryable
             static::$tableName .
             ' SET ' .
             $this->updatePlaceHolders($fields) .
-        ' WHERE id = :id');
+            ' WHERE id = :id');
         $fields['id'] = $this->id;
         $query->execute($fields);
 
@@ -142,6 +141,7 @@ trait Queryable
 
         return $obj;
     }
+
     public function orderBy(array $columns): static
     {
         $this->required(['select'], 'ORDER BY can not be called without');
@@ -158,6 +158,7 @@ trait Queryable
 
         return $this;
     }
+
     public function get(): array
     {
         return db()->query(static::$query)->fetchAll(PDO::FETCH_CLASS, static::class);
@@ -187,6 +188,7 @@ trait Queryable
 
         return $this->where($column, $operator, $value);
     }
+
     protected function where(string $column, SQL $operator = SQL::EQUAL, mixed $value = null): static
     {
         $this->prevent(['order', 'limit', 'having', 'group'], 'WHERE cat not be used after');
@@ -195,7 +197,7 @@ trait Queryable
         $value = $this->transformWhereValue($value);
 
 
-        if(!in_array('where', $obj->commands)) {
+        if (!in_array('where', $obj->commands)) {
             static::$query .= ' WHERE ';
             $obj->commands[] = 'where';
         }
@@ -207,30 +209,29 @@ trait Queryable
 
     protected function transformWhereValue(mixed $value): string|int|float
     {
-        $checkOnString = fn($v) =>
-               !is_null($v)
+        $checkOnString = fn($v) => !is_null($v)
             && !is_bool($v)
             && !is_numeric($v)
             && !is_array($v)
             && $v !== SQL::NULL->value;
 
-        if($checkOnString($value)) {
+        if ($checkOnString($value)) {
             $value = "'$value'";
         }
 
-        if(is_null($value)) {
+        if (is_null($value)) {
             $value = SQL::NULL->value;
         }
 
-        if(is_array($value)) {
+        if (is_array($value)) {
             $value = array_map(fn($v) => $checkOnString($v) ? "'$v'" : $v, $value);
             $value = '(' . implode(', ', $value) . ')';
         }
 
-        if(is_bool($value)){
+        if (is_bool($value)) {
             $value = $value ? 'TRUE' : 'FALSE';
         }
-       // dd($value);
+        // dd($value);
         return $value;
     }
 
