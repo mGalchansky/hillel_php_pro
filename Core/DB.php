@@ -16,6 +16,7 @@ class DB
             static::$pdo = new PDO(
                 $dsn,
                 getenv('DB_USER'),
+                //'pass',
                 getenv('DB_PASS'),
                 [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

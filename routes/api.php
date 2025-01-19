@@ -10,3 +10,7 @@ Router::post('api/register')
 Router::post('api/auth')
     ->controller(AuthController::class)
     ->action('auth');
+
+Router::get('api/v1/folders')
+    ->controller(\App\Controllers\v1\FoldersController::class)
+    ->action('index');

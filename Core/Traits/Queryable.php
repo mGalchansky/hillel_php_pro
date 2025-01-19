@@ -111,14 +111,10 @@ trait Queryable
 
     public function update(array $fields): static
     {
-        $query = db()->prepare('UPDATE ' .
-            static::$tableName .
-            ' SET ' .
-            $this->updatePlaceHolders($fields) .
-            ' WHERE id = :id');
+        $query = db()->prepare("UPDATE " . static::$tableName . " SET " . $this->updatePlaceholders($fields) . ' WHERE id = :id');
         $fields['id'] = $this->id;
+       // dd($query);
         $query->execute($fields);
-
         return static::find($this->id);
     }
 
@@ -231,7 +227,6 @@ trait Queryable
         if (is_bool($value)) {
             $value = $value ? 'TRUE' : 'FALSE';
         }
-        // dd($value);
         return $value;
     }
 
@@ -267,8 +262,7 @@ trait Queryable
 
     protected function updatePlaceHolders(array $fields): string
     {
-        $keys = array_map(fn($key) => "$key => :$key", array_keys($fields));
-
-        return implode(', ', $keys);
+        $keys = array_map(fn($key) => "$key = :$key", array_keys($fields));
+       return implode(', ', $keys);
     }
 }

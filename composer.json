@@ -5,9 +5,9 @@
             "App\\": "App/",
             "Core\\": "Core/"
         },
-        "files": [
-            "./Core/helpers.php",
-            "./cli.php"
+        "files":
+                [
+            "./Core/helpers.php"
         ]
     },
     "require": {

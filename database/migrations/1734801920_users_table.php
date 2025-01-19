@@ -12,7 +12,7 @@ return new class implements \App\Commands\Contract\Migration
            email VARCHAR(255) NOT NULL UNIQUE,
            password TEXT NOT NULL,
            token TEXT,
-           token_expired_at DATETIME,
+           token_expired_at INT,
            created_at DATETIME DEFAULT NOW()
         )';
     }

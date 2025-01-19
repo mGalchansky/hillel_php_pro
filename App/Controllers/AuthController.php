@@ -20,6 +20,7 @@ class AuthController extends Controller
                 ...$fields,
                 'password' => password_hash($fields['password'], PASSWORD_DEFAULT)
             ]);
+            //dd($user);
             return $this->response(Status::OK, $user->toArray());
         }
 
@@ -33,14 +34,19 @@ class AuthController extends Controller
 
     public function auth()
     {
-        /*$fields = requestBody();
+        $fields = requestBody();
 
         if(AuthValidator::validate($fields)) {
             $user = User::findBy('email', $fields['email']);
 
             if(password_verify($fields['password'], $user->password)) {
-                $expired_at = time() + 1200;
+                $expired_at = time() + 90;
                 $token = Token::create($user->id, $user->password, $expired_at, 'localhost');
+
+                $user->update([
+                    'token' => $token,
+                    'token_expired_at' => $expired_at
+                    ]);
 
                 return $this->response(Status::OK, compact('token'));
             }
@@ -51,6 +57,6 @@ class AuthController extends Controller
             Status::UNPROCESSABLE_ENTITY,
             $fields,
             AuthValidator::getErrors()
-        );*/
+        );
     }
 }
