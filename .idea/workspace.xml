@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f910a42-93d0-4fc9-90a6-a4112589d588" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.docker/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/php/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/DB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Traits/Queryable.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Traits/Queryable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Core/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/1734801920_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/1734801920_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/1736424175_test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="HW11_dependency_inversion" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/php/vendor/composer" />
+      <path value="$PROJECT_DIR$/php/vendor/larapack/dd" />
+      <path value="$PROJECT_DIR$/php/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/php/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/larapack/dd" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/splitbrain/php-cli" />
+      <path value="$PROJECT_DIR$/vendor/rbdwllr/reallysimplejwt" />
+    </include_path>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2oJHau9WIWtXzWEcR75hnPKZinb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;MVC__4&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mgalchansky/Laravel_project/lara-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mgalchansky\Project\PHP_Pro\public" />
+      <recent name="C:\Users\mgalchansky\Project\PHP_Pro\public\vendor" />
+      <recent name="C:\Users\mgalchansky\Project\PHP_Pro" />
+      <recent name="C:\Users\mgalchansky\Project\PHP_Pro\Classes" />
+      <recent name="C:\Users\mgalchansky\Project\PHP_Pro\.docker\php" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Script.index.php">
+    <configuration name="User.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/Classes/User.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/Classes/index.php">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23726.107" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23726.107" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f910a42-93d0-4fc9-90a6-a4112589d588" name="Changes" comment="" />
+      <created>1730580826022</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730580826022</updated>
+      <workItem from="1730580826985" duration="1205000" />
+      <workItem from="1730584580144" duration="12842000" />
+      <workItem from="1730738232733" duration="15359000" />
+      <workItem from="1730840261534" duration="7064000" />
+      <workItem from="1730915558408" duration="11094000" />
+      <workItem from="1731147269279" duration="6970000" />
+      <workItem from="1731182816540" duration="5071000" />
+      <workItem from="1731225906897" duration="9428000" />
+      <workItem from="1731349101708" duration="3623000" />
+      <workItem from="1731353495996" duration="2503000" />
+      <workItem from="1731428584512" duration="17551000" />
+      <workItem from="1731608114252" duration="6877000" />
+      <workItem from="1731874946813" duration="900000" />
+      <workItem from="1732211309760" duration="6774000" />
+      <workItem from="1732220270288" duration="14221000" />
+      <workItem from="1732457476756" duration="1732000" />
+      <workItem from="1732460564718" duration="7393000" />
+      <workItem from="1732479253239" duration="23879000" />
+      <workItem from="1732604013298" duration="6890000" />
+      <workItem from="1732817999328" duration="8642000" />
+      <workItem from="1732897505255" duration="2739000" />
+      <workItem from="1733140643132" duration="4933000" />
+      <workItem from="1733389560149" duration="7231000" />
+      <workItem from="1733401226357" duration="4501000" />
+      <workItem from="1733419339583" duration="699000" />
+      <workItem from="1733472344913" duration="1841000" />
+      <workItem from="1733484255704" duration="1476000" />
+      <workItem from="1733485805545" duration="2087000" />
+      <workItem from="1733750279256" duration="1555000" />
+      <workItem from="1733942002376" duration="7682000" />
+      <workItem from="1734078499797" duration="18239000" />
+      <workItem from="1734365345730" duration="8329000" />
+      <workItem from="1734421262174" duration="6016000" />
+      <workItem from="1734512685279" duration="44343000" />
+      <workItem from="1734726212566" duration="86654000" />
+      <workItem from="1735242516098" duration="3805000" />
+      <workItem from="1735289872771" duration="595000" />
+      <workItem from="1735322037271" duration="412000" />
+      <workItem from="1735322465146" duration="2308000" />
+      <workItem from="1735325173069" duration="6148000" />
+      <workItem from="1735370401504" duration="3858000" />
+      <workItem from="1735463675286" duration="823000" />
+      <workItem from="1735464780766" duration="309000" />
+      <workItem from="1735465731657" duration="4264000" />
+      <workItem from="1735747068050" duration="2612000" />
+      <workItem from="1736105690429" duration="1911000" />
+      <workItem from="1736244784231" duration="26192000" />
+      <workItem from="1736424531503" duration="3866000" />
+      <workItem from="1736541249056" duration="147000" />
+      <workItem from="1736964602600" duration="2255000" />
+      <workItem from="1737302365033" duration="8140000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
